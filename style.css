@@ -1,0 +1,33 @@
+body {
+	background-color: lightblue;
+}
+
+h1 {
+	color: navy;
+}
+
+/* I perfer to use classes */
+.center-text {
+	text-align: center;
+}
+
+.color-purple {
+	color: purple;
+}
+
+.image-square {
+	width: 100px;
+	height: 100px;
+}
+
+/* I don't reccoment using id's by default */
+#my-second-paragraph {
+	color: seagreen;
+}
+
+/* nesting */
+h1 span {
+	text-decoration: underline;
+}
+
+/* Media querys - css rules applied to specific width */
