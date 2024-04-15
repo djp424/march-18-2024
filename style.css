@@ -31,7 +31,7 @@ h1 span {
 }
 
 /* Media querys - css rules applied to specific width */
-@media (min-width: 800px) {
+@media (max-width: 800px) {
 	body {
 		background-color: lavender;
 	}
