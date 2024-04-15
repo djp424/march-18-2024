@@ -31,3 +31,11 @@ h1 span {
 }
 
 /* Media querys - css rules applied to specific width */
+@media (max-width: 800px) {
+	body {
+		background-color: lavender;
+	}
+	h1 span {
+		display: none;
+	}
+}
