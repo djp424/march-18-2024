@@ -4,7 +4,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="style.css">
 	</head>
-	<body>
+	<body id="body">
 		<h1 class="center-text">My First <span>Heading</span></h1>
 		<p class="center-text color-purple">My first paragraph.</p>
 		<p id="my-second-paragraph">My second paragraph.</p>
@@ -13,4 +13,14 @@
 		<p>My fifth paragraph.</p>
 		<p>My sixth paragraph.</p>
 	</body>
+	<script>
+		// Create a new element
+		const footerElement = document.createElement("footer");
+		const footerText = document.createTextNode("footer content");
+		footerElement.appendChild(footerText);
+
+		// Append the new element to site
+		const bodyElement = document.getElementById("body"); // Could use query selector.
+		bodyElement.appendChild(footerElement);
+	</script>
 </html>
