@@ -12,6 +12,16 @@
 		<p class="center-text">My forth paragraph.</p>
 		<p>My fifth paragraph.</p>
 		<p>My sixth paragraph.</p>
+
+		<form id="form">
+			<label for="usersName">Name:</label><br>
+			<input type="text" id="usersName" name="usersName" value=""><br>
+			<label for="usersEmail">Email:</label><br>
+			<input type="text" id="usersEmail" name="usersEmail" value=""><br><br>
+			<input type="submit" value="Submit">
+		</form>
+
+		<p id="log"></p>
 	</body>
 	<script>
 		// Create a new element
@@ -22,5 +32,23 @@
 		// Append the new element to site
 		const bodyElement = document.getElementById("body"); // Could use query selector.
 		bodyElement.appendChild(footerElement);
+
+		// Form logic
+		function logSubmit(event) {
+			console.log(event);
+			console.log(event.target);
+			console.log(event.target.usersName);
+			console.log(event.target.usersName.value);
+
+			let name = event.target.usersName.value;
+
+			log.textContent = `Hello: ${name}`;
+			
+			event.preventDefault();
+		}
+
+		const formElement = document.getElementById("form");
+		const log = document.getElementById("log");
+		form.addEventListener("submit", logSubmit);
 	</script>
 </html>
